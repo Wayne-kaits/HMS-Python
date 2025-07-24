@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ page_title }}</h2>
+<table class="table">
+    <thead><tr><th>Title</th><th>Date</th></tr></thead>
+    <tbody>
+    {% for r in reports %}
+    <tr><td>{{ r.title }}</td><td>{{ r.date }}</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

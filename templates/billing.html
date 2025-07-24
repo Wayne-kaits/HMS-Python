@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ page_title }}</h2>
+<table class="table">
+    <thead><tr><th>Patient</th><th>Amount</th><th>Status</th></tr></thead>
+    <tbody>
+    {% for b in bills %}
+    <tr><td>{{ b.patient }}</td><td>{{ b.amount }}</td><td>{{ b.status }}</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
